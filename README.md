@@ -1,4 +1,6 @@
-# 依頼分析OAシステム ― 過去データ再活用基盤 ナレッジ活用プロジェクト（oa-system）
+# 依頼分析OAシステム ― 過去データ再活用基盤 ナレッジ活用プロジェクト（oa-system-knowledge）
+
+> 📦 本リポジトリは [`furukawa-ai/upstream-process-skills`](https://github.com/furukawa-ai/upstream-process-skills) モノレポの `upstream/projects/oa-system/` を独立リポジトリとして切り出したものです（2026/06/10、`git subtree split` で履歴保持）。**今後の更新・管理は本リポジトリで行います（管理担当: 田中利歩）。** モノレポ側ディレクトリは移管時点のスナップショットとして凍結されます。
 
 解析センターの**依頼分析業務における過去案件データの再活用基盤**の構築を目指すプロジェクト。横浜・平塚に約20年・**約48,512件**蓄積された依頼書・分析結果・報告書（PDF／Word／Excel／PPT）が死蔵し、キーワード検索も属人化して横断活用できない状況に対し、生産性改革部 デジタルソリューション室（DS室）の2026年度「ナレッジ活用」テーマの一環として、**LLM Wiki アプローチ**による過去データの横断検索・要約基盤を提案。2026/5/14 初回打合せで **LLM Wiki 方式による小規模試行**を合意した。**2026/6/5（金）に先方担当者より試行用データを受領**（2015年度分から抜粋した **37件分の依頼フォルダ・計377ファイル**）し、ファイル内容の確認・LLM Wiki 生成に着手。約2週間後（**6/19 前後**）に状況共有の打合せを予定している。
 
@@ -56,7 +58,7 @@ oa-system/
 
 ## LLM Wiki アプローチの妥当性
 
-依頼分析データは「依頼書（PDF）＋分析手法＋結果＋報告書（Word/Excel/PPT）」が案件単位でまとまっており、案件ごとのナレッジ構造が明確。AI が生データから自然言語のウィキを自動生成・構造化し、それをソースとして回答する LLM Wiki 方式は、属人的キーワードに依存しない横断検索・要約と相性が良い。RAG（ベクトル検索）と異なり追加データ投入時は差分＋整合性調整のみで済み、全体再処理が不要なため運用コストを抑えやすい。先行する [functional-resin-mfg-qa](../functional-resin-mfg-qa/)・[laser-processing-knowledge](../laser-processing-knowledge/)・[at-design-review-knowledge](../at-design-review-knowledge/) と同方式。
+依頼分析データは「依頼書（PDF）＋分析手法＋結果＋報告書（Word/Excel/PPT）」が案件単位でまとまっており、案件ごとのナレッジ構造が明確。AI が生データから自然言語のウィキを自動生成・構造化し、それをソースとして回答する LLM Wiki 方式は、属人的キーワードに依存しない横断検索・要約と相性が良い。RAG（ベクトル検索）と異なり追加データ投入時は差分＋整合性調整のみで済み、全体再処理が不要なため運用コストを抑えやすい。先行する [functional-resin-mfg-qa](https://github.com/furukawa-ai/upstream-process-skills/tree/main/upstream/projects/functional-resin-mfg-qa)・[laser-processing-knowledge](https://github.com/furukawa-ai/upstream-process-skills/tree/main/upstream/projects/laser-processing-knowledge)・[at-design-review-knowledge](https://github.com/furukawa-ai/upstream-process-skills/tree/main/upstream/projects/at-design-review-knowledge) と同方式。
 
 ## 打合せ・相談資料（current-situation-docs/）
 
@@ -92,8 +94,8 @@ oa-system/
 
 ## 関連
 
-- 上位リポジトリ: [`upstream-process-skills`](../../../README.md)
-- 類似プロジェクト（ナレッジ活用・LLM Wiki 系）:
-  - [`functional-resin-mfg-qa/`](../functional-resin-mfg-qa/) — 機能樹脂製造部品質保証課 ナレッジ活用（LLM Wiki アプローチの先行事例）
-  - [`laser-processing-knowledge/`](../laser-processing-knowledge/) — レーザ加工 ナレッジ活用（LLM Wiki アプローチの先行事例）
-  - [`at-design-review-knowledge/`](../at-design-review-knowledge/) — AT事業部門 DR改善 ナレッジ活用（LLM Wiki アプローチの先行事例）
+- ナレッジhub（モノレポ）: [`furukawa-ai/upstream-process-skills`](https://github.com/furukawa-ai/upstream-process-skills) … 切り出し元。各テーマの横断参照用
+- 類似プロジェクト（ナレッジ活用・LLM Wiki 系。モノレポ内）:
+  - [`functional-resin-mfg-qa`](https://github.com/furukawa-ai/upstream-process-skills/tree/main/upstream/projects/functional-resin-mfg-qa) — 機能樹脂製造部品質保証課 ナレッジ活用（LLM Wiki アプローチの先行事例）
+  - [`laser-processing-knowledge`](https://github.com/furukawa-ai/upstream-process-skills/tree/main/upstream/projects/laser-processing-knowledge) — レーザ加工 ナレッジ活用（LLM Wiki アプローチの先行事例）
+  - [`at-design-review-knowledge`](https://github.com/furukawa-ai/upstream-process-skills/tree/main/upstream/projects/at-design-review-knowledge) — AT事業部門 DR改善 ナレッジ活用（LLM Wiki アプローチの先行事例）

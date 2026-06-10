@@ -1,0 +1,20 @@
+# OS / エディタ
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*~
+
+# Office 一時ファイル
+~$*.docx
+~$*.pptx
+~$*.xlsx
+
+# Claude Code / ローカル設定
+.claude/settings.local.json
+
+# 試行用の実データ（機密。リポジトリには含めない）
+# ※ 顧客情報・輸出管理データを含みうる依頼フォルダ等はコミットしないこと
+test-data/
+trial-data/
+受領データ/

@@ -1,0 +1,14 @@
+# テキストは自動正規化（コミット時LF、チェックアウト時はOS既定）
+* text=auto
+
+# Markdown はLFに統一
+*.md text eol=lf
+
+# Office / バイナリ資料は差分・改行変換の対象外
+*.pptx binary
+*.docx binary
+*.xlsx binary
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
